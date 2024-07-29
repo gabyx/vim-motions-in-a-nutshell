@@ -254,4 +254,13 @@ will not change using it, trust me. =)
 
 ---
 
+## Downsides
+
+- IDE setup is complicated
+- keybindings logic not 100% consistent
+
+Some editors aim to address these aspects:
+- https://helix-editor.com
+- http://kakoune.org
+
 

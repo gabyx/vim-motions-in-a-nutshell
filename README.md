@@ -31,6 +31,16 @@ Gets you into `Normal` mode form anywhere. Press this when you entered wrong
 command sequences or other mistakes. This will be probably your most pressed
 command at beginning. Don't be daunted, it will get less.
 
+Also its highly recommended you improve your <kbd>Esc</kbd> or
+<kbd>Ctrl</kbd>+<kbd>C</kbd> key presses by remapping <kbd>Caps Lock</kbd> to
+<kbd>Ctrl</kbd> or <kbd>Esc</kbd>. You can do this with:
+
+- MacOS: In System Settings (Keyboard -> Modifiers Keys) or with
+  [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
+
+- Windows: [PowerToys](https://learn.microsoft.com/de-de/windows/powertoys/) or
+  [dual-key-remap](https://github.com/ililim/dual-key-remap).
+
 ---
 
 ## Undo/Redo

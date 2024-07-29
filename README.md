@@ -174,7 +174,7 @@ copy/delete or change/substitute it with the commands already learned.
 - <kbd>yi"</kbd> : Copy (<kbd>y</kbd>) _inside_ quotes `"` found from the
   current cursor position.
 
-**Change Inside/Around**:
+**Delete Inside/Around**:
 
 - <kbd>da"</kbd> : Delete _around_ quotes `"` found from the current cursor
   position.

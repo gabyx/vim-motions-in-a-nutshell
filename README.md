@@ -257,6 +257,7 @@ will not change using it, trust me. =)
 ## Downsides
 
 - IDE setup is complicated
+  + i.e. just use VScode/zed/other in vim-mode
 - keybindings logic not 100% consistent
 
 Some editors aim to address these aspects:

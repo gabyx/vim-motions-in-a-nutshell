@@ -25,7 +25,7 @@ summary.
 
 ## Cancel Anything
 
-<kbd>Ctrl</kbd>+<kbd>C</kbd> **or** <kbd>Esc</kbd>
+<kbd>Ctrl</kbd>+<kbd>c</kbd> **or** <kbd>Esc</kbd>
 
 Gets you into `Normal` mode form anywhere. Press this when you entered wrong
 command sequences or other mistakes. This will be probably your most pressed

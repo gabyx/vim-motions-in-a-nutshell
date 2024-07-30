@@ -30,8 +30,10 @@ summary. Many text based softwares have a vim-mode, or plugins.
 Gets you into `Normal` mode from anywhere. Press this when you entered wrong
 command sequences or other mistakes.
 
-> [!TIP] Remap <kbd>Caps Lock</kbd> to <kbd>Ctrl</kbd> or <kbd>Esc</kbd> to ease
-> finger strain. You can do this with:
+<!-- prettier-ignore -->
+> [!TIP]
+> Remap <kbd>Caps Lock</kbd> to <kbd>Ctrl</kbd> or <kbd>Esc</kbd> to ease finger
+> strain. You can do this with:
 >
 > - MacOS: In System Settings (Keyboard -> Modifiers Keys) or with
 >   [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
@@ -173,10 +175,14 @@ to form "sentences". Sentences have the following structure:
 
 For example to _delete two words_: `d2w`
 
-> [!TIP] **You do not need to master a ton of these, see the next sections for
+<!-- prettier-ignore -->
+> [!TIP]
+> **You do not need to master a ton of these, see the next sections for
 > the useful ones.**
 
-> [!NOTE] The first count in the structure above is used to run the whole
+<!-- prettier-ignore -->
+> [!NOTE]
+> The first count in the structure above is used to run the whole
 > sentence multiple times
 >
 > Learn more about the syntax:
@@ -225,11 +231,13 @@ For example to _delete two words_: `d2w`
 - <kbd>d$</kbd> : Delete till end of line.
 - <kbd>d0</kbd> : Delete till beginning of line.
 
-**Note:** Yeah, you guessed it, you can use also other things in place of `"`.
-Try to use <kbd>(</kbd> or <kbd>[</kbd> or <kbd>{</kbd> or <kbd>`</kbd> or
-<kbd>'</kbd> etc. to easily change around/inside this characters. Also you can
-use <kbd>w</kbd> or <kbd>W</kbd> to do the action inside/around a word with and
-without spaces.
+<!-- prettier-ignore -->
+> [!Note]
+> Yeah, you guessed it, you can use also other things in place of `"`.
+> Try to use <kbd>(</kbd> or <kbd>[</kbd> or <kbd>{</kbd> or <kbd>`</kbd> or
+> <kbd>'</kbd> etc. to easily change around/inside this characters. Also you can
+> use <kbd>w</kbd> or <kbd>W</kbd> to do the action inside/around a word with and
+> without spaces.
 
 ## Miscellaneous
 

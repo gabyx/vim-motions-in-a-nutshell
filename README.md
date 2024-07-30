@@ -21,25 +21,25 @@ refine your habits with even more awesomeness.
 # Preliminaries
 
 You can use VS Code with a Vim extension or better `neovim` to follow the below
-summary.
+summary. Many text based softwares have a vim-mode, or plugins.
 
 ## Cancel Anything
 
 <kbd>Ctrl</kbd>+<kbd>c</kbd> **or** <kbd>Esc</kbd>
 
-Gets you into `Normal` mode form anywhere. Press this when you entered wrong
-command sequences or other mistakes. This will be probably your most pressed
-command at beginning. Don't be daunted, it will get less.
+Gets you into `Normal` mode from anywhere. Press this when you entered wrong
+command sequences or other mistakes. 
 
-Also its highly recommended you improve your <kbd>Esc</kbd> or
-<kbd>Ctrl</kbd>+<kbd>C</kbd> key presses by remapping <kbd>Caps Lock</kbd> to
-<kbd>Ctrl</kbd> or <kbd>Esc</kbd>. You can do this with:
+> [!TIP]
+> Remap <kbd>Caps Lock</kbd> to
+> <kbd>Ctrl</kbd> or <kbd>Esc</kbd> to ease finger strain. You can do this with:
+>
+> - MacOS: In System Settings (Keyboard -> Modifiers Keys) or with
+> [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
+>
+> - Windows: [PowerToys](https://learn.microsoft.com/de-de/windows/powertoys/) or
+> [dual-key-remap](https://github.com/ililim/dual-key-remap).
 
-- MacOS: In System Settings (Keyboard -> Modifiers Keys) or with
-  [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
-
-- Windows: [PowerToys](https://learn.microsoft.com/de-de/windows/powertoys/) or
-  [dual-key-remap](https://github.com/ililim/dual-key-remap).
 
 ---
 
@@ -52,21 +52,21 @@ redo press <kbd>Ctrl</kbd>+<kbd>r</kbd>.
 
 ## Normal Mode and Visual Mode
 
-Vim has three important modes, `Normal`, `Insert` and `Visual` mode. `Normal`
-mode is mostly where you move the cursor around and jump around in your
-document. The `Visual` mode is to select lines/blocks etc. and to do actions on
-them. `Insert` mode is to write text. To go to `normal` mode you use
-<kbd>Ctrl</kbd>+<kbd>c</kbd> or <kbd>Esc</kbd> as described above. To go to
-insert press <kbd>i</kbd> and for `Visual` mode press:
+Vim is a modal editor. It has three important modes:
+- `Normal` : jump around and use keybindings (default).
+- `Insert` : write text. 
+- `Visual` : select lines/blocks of text 
 
+You can switch any mode from the normal mode using the following keys:
+- <kbd>i</kbd>/<kbd>a</kbd> : `Insert`
 - <kbd>v</kbd> : `Visual` mode (normal selection).
-- <kbd>V</kbd> : `Line Visual` mode (line selections).
-- <kbd>Ctrl</kbd> + <kbd>v</kbd> for the `Block Visual` mode (block selections).
+- <kbd>Shift</kbd> + <kbd>v</kbd> : `Line Visual` mode (line selections).
+- <kbd>Ctrl</kbd> + <kbd>v</kbd> : `Block Visual` mode (block selections).
 
 ## Entering Command Mode
 
-When you (accidentally) press <kbd>:</kbd>, you will enter `Command` mode. You
-won't use this much at the beginning. If you end up in `Command` mode, press
+In normal mode, you can press <kbd>:</kbd> to enter `Command` mode. You
+won't use this much at the beginning. If you accidentally end up in `Command` mode, press
 <kbd>Esc</kbd> or <kbd>Ctrl</kbd>+<kbd>c</kbd> to go back into `Normal` mode.
 
 ---
@@ -76,21 +76,21 @@ won't use this much at the beginning. If you end up in `Command` mode, press
 To move your cursor in the buffer you have to learn the following keys. This
 takes some time but you will memorize them after 2-3 days.
 
-- <kbd>h</kbd> and <kbd>l</kbd> : Moves one character to the right/left in the
+- <kbd>h</kbd> and <kbd>l</kbd> : Moves one character to the left/right in the
   current buffer.
-- <kbd>j</kbd> and <kbd>k</kbd> : Moves line up/down in the current buffer.
+- <kbd>j</kbd> and <kbd>k</kbd> : Moves line down/up in the current buffer.
 
-The point of not remapping these keys is, that you will want this experience
-since lots CLI tools etc. also use these mappings and its best to stick to them.
+Lots CLI tools etc. also use these mappings and its best to stick to them. It is also more efficient as they keep your fingers on the [home row](https://simple.wikipedia.org/wiki/Home_row).
 
-**Note**: To battle squeeze these mappings into your mechanical cortex I
+> [!NOTE]
+> To battle squeeze these mappings into your mechanical cortex I
 recommend [ThePrimagean's](https://github.com/ThePrimeagen/vim-be-good) plugin
 game in `nvim` to quickly memorize or play
 [this game](https://vim-adventures.com).
 
 ---
 
-## Insert at the Beginning or End
+## Insert at Beginning or End
 
 The next most important command is to insert at the beginning (skipped white
 space) or the end with
@@ -116,7 +116,10 @@ To move faster on a line you should memorize:
 
 ## Copy/Delete Lines
 
-- <kbd>y</kbd> : Copy the current line.
+Copy (yank) and delete are vim _operators_: they change text objects.
+
+Doubling the operator key applies it to the line (a text object).
+
 - <kbd>y</kbd><kbd>y</kbd> : Copy the current line.
 - <kbd>d</kbd><kbd>d</kbd> : Delete the current line.
 
@@ -158,7 +161,28 @@ copy/delete or change/substitute it with the commands already learned.
 
 ---
 
+## vim motion syntax
+
+This is where the fun truly begins!
+vim allows to combine motions and operators to form "sentences".
+Sentences have the following structure:
+
+```
+[count]<operator>[count]<motion>`
+```
+
+For example to _delete two words_: `d2w`
+
+> [!NOTE]
+> The first count in the structure above is used to run the whole sentence multiple times
+>
+> Learn more about the syntax: [1](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/editing-like-magic-with-vim-operators/), [2](https://agill.xyz/vim/motions)
+
+---
+
 ## Change Inside/Around Stuff
+
+"Below" are some other useful sentences you want to remember:
 
 **Change Inside/Around**:
 
@@ -185,7 +209,7 @@ copy/delete or change/substitute it with the commands already learned.
 
 - <kbd>ct?</kbd> : Change the text selection till the next character `?`.
 - <kbd>yt?</kbd> : Copy the text selection till the next character `?`.
-- <kbd>dt?</kbd> : Delete the text selection till the next character `?`.
+- <kbd>dT?</kbd> : Delete the text selection till the previous character `?`.
 
 **Copy/Delete/Change Till End**:
 
@@ -214,8 +238,30 @@ In `Block Visual` mode: Select some lines, then use
 - <kbd>C</kbd> : Change the selection on all lines. Once done, press
   <kbd>Esc</kbd> to make it apply on all lines.
 
+## Jumping around
+
+Vim keeps a list of your jumps within or between buffers.
+You can jump back and forth in you jump history with <kbd>Ctrl</kbd>+<kbd>i</kbd>/<kbd>Ctrl</kbd>+<kbd>o</kbd>.
+
+When programming, this is very useful in conjunction with `gd` (go to definition == <kbd>Ctrl</kbd>+<kbd>click</kbd> in VSCode)
+
 ## The End
 
 That's basically it and are the top commands I use daily. There is obviously
 much more on the Vim motions side. Now, start practicing it, once learned you
 will not change using it, trust me. =)
+
+
+---
+
+## Downsides
+
+- IDE setup is complicated
+  + i.e. just use VScode/zed/other in vim-mode
+- keybindings logic not 100% consistent
+
+Some editors aim to address these aspects:
+- https://helix-editor.com
+- http://kakoune.org
+
+

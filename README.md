@@ -28,18 +28,15 @@ summary. Many text based softwares have a vim-mode, or plugins.
 <kbd>Ctrl</kbd>+<kbd>c</kbd> **or** <kbd>Esc</kbd>
 
 Gets you into `Normal` mode from anywhere. Press this when you entered wrong
-command sequences or other mistakes. 
+command sequences or other mistakes.
 
-> [!TIP]
-> Remap <kbd>Caps Lock</kbd> to
-> <kbd>Ctrl</kbd> or <kbd>Esc</kbd> to ease finger strain. You can do this with:
+> [!TIP] Remap <kbd>Caps Lock</kbd> to <kbd>Ctrl</kbd> or <kbd>Esc</kbd> to ease
+> finger strain. You can do this with:
 >
 > - MacOS: In System Settings (Keyboard -> Modifiers Keys) or with
-> [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
->
-> - Windows: [PowerToys](https://learn.microsoft.com/de-de/windows/powertoys/) or
-> [dual-key-remap](https://github.com/ililim/dual-key-remap).
-
+>   [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
+> - Windows: [PowerToys](https://learn.microsoft.com/de-de/windows/powertoys/)
+>   or [dual-key-remap](https://github.com/ililim/dual-key-remap).
 
 ---
 
@@ -53,11 +50,13 @@ redo press <kbd>Ctrl</kbd>+<kbd>r</kbd>.
 ## Normal Mode and Visual Mode
 
 Vim is a modal editor. It has three important modes:
-- `Normal` : jump around and use keybindings (default).
-- `Insert` : write text. 
-- `Visual` : select lines/blocks of text 
+
+- `Normal` : Jump around and use keybindings (default).
+- `Insert` : Write text.
+- `Visual` : Select lines/blocks of text
 
 You can switch any mode from the normal mode using the following keys:
+
 - <kbd>i</kbd>/<kbd>a</kbd> : `Insert`
 - <kbd>v</kbd> : `Visual` mode (normal selection).
 - <kbd>Shift</kbd> + <kbd>v</kbd> : `Line Visual` mode (line selections).
@@ -65,9 +64,10 @@ You can switch any mode from the normal mode using the following keys:
 
 ## Entering Command Mode
 
-In normal mode, you can press <kbd>:</kbd> to enter `Command` mode. You
-won't use this much at the beginning. If you accidentally end up in `Command` mode, press
-<kbd>Esc</kbd> or <kbd>Ctrl</kbd>+<kbd>c</kbd> to go back into `Normal` mode.
+In normal mode, you can press <kbd>:</kbd> to enter `Command` mode. You won't
+use this much at the beginning. If you accidentally end up in `Command` mode,
+press <kbd>Esc</kbd> or <kbd>Ctrl</kbd>+<kbd>c</kbd> to go back into `Normal`
+mode.
 
 ---
 
@@ -80,13 +80,14 @@ takes some time but you will memorize them after 2-3 days.
   current buffer.
 - <kbd>j</kbd> and <kbd>k</kbd> : Moves line down/up in the current buffer.
 
-Lots CLI tools etc. also use these mappings and its best to stick to them. It is also more efficient as they keep your fingers on the [home row](https://simple.wikipedia.org/wiki/Home_row).
+Lots CLI tools etc. also use these mappings and its best to stick to them. It is
+also more efficient as they keep your fingers on the
+[home row](https://simple.wikipedia.org/wiki/Home_row).
 
-> [!NOTE]
-> To battle squeeze these mappings into your mechanical cortex I
-recommend [ThePrimagean's](https://github.com/ThePrimeagen/vim-be-good) plugin
-game in `nvim` to quickly memorize or play
-[this game](https://vim-adventures.com).
+> [!NOTE] To battle squeeze these mappings into your mechanical cortex I
+> recommend [ThePrimagean's](https://github.com/ThePrimeagen/vim-be-good) plugin
+> game in `nvim` to quickly memorize or play
+> [this game](https://vim-adventures.com).
 
 ---
 
@@ -161,22 +162,26 @@ copy/delete or change/substitute it with the commands already learned.
 
 ---
 
-## vim motion syntax
+## Vim Motion Syntax
 
-This is where the fun truly begins!
-vim allows to combine motions and operators to form "sentences".
-Sentences have the following structure:
+This is where the fun truly begins! Vim allows to combine motions and operators
+to form "sentences". Sentences have the following structure:
 
 ```
-[count]<operator>[count]<motion>`
+[count]<operator>[count]<motion>
 ```
 
 For example to _delete two words_: `d2w`
 
-> [!NOTE]
-> The first count in the structure above is used to run the whole sentence multiple times
+> [!TIP] **You do not need to master a ton of these, see the next sections for
+> the useful ones.**
+
+> [!NOTE] The first count in the structure above is used to run the whole
+> sentence multiple times
 >
-> Learn more about the syntax: [1](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/editing-like-magic-with-vim-operators/), [2](https://agill.xyz/vim/motions)
+> Learn more about the syntax:
+> [1](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/editing-like-magic-with-vim-operators/),
+> [2](https://agill.xyz/vim/motions)
 
 ---
 
@@ -223,7 +228,8 @@ For example to _delete two words_: `d2w`
 **Note:** Yeah, you guessed it, you can use also other things in place of `"`.
 Try to use <kbd>(</kbd> or <kbd>[</kbd> or <kbd>{</kbd> or <kbd>`</kbd> or
 <kbd>'</kbd> etc. to easily change around/inside this characters. Also you can
-use <kbd>w</kbd> to do the action inside/around a word.
+use <kbd>w</kbd> or <kbd>W</kbd> to do the action inside/around a word with and
+without spaces.
 
 ## Miscellaneous
 
@@ -231,7 +237,8 @@ use <kbd>w</kbd> to do the action inside/around a word.
 - <kbd>&lt;</kbd><kbd>&lt;</kbd> : Remove indentation on the current line.
 - <kbd>=</kbd><kbd>=</kbd> : Format current line.
 
-In `Block Visual` mode: Select some lines, then use
+In `Block Visual` mode (<kbd>Ctrl</kbd>+<kbd>V</kbd>): Select some lines, then
+use
 
 - <kbd>I</kbd> : Insert on all lines. Once done, press <kbd>Esc</kbd> to make it
   apply on all lines.
@@ -240,28 +247,29 @@ In `Block Visual` mode: Select some lines, then use
 
 ## Jumping around
 
-Vim keeps a list of your jumps within or between buffers.
-You can jump back and forth in you jump history with <kbd>Ctrl</kbd>+<kbd>i</kbd>/<kbd>Ctrl</kbd>+<kbd>o</kbd>.
+Vim keeps a list of your jumps within or between buffers. You can jump back and
+forth in you jump history with
+<kbd>Ctrl</kbd>+<kbd>i</kbd>/<kbd>Ctrl</kbd>+<kbd>o</kbd>.
 
-When programming, this is very useful in conjunction with `gd` (go to definition == <kbd>Ctrl</kbd>+<kbd>click</kbd> in VSCode)
+When programming, this is very useful in conjunction with `gd` (go to definition
+== <kbd>Ctrl</kbd>+<kbd>click</kbd> in VSCode)
 
 ## The End
 
-That's basically it and are the top commands I use daily. There is obviously
+That's basically it. These are the top commands I use daily. There is obviously
 much more on the Vim motions side. Now, start practicing it, once learned you
 will not change using it, trust me. =)
-
 
 ---
 
 ## Downsides
 
-- IDE setup is complicated
-  + i.e. just use VScode/zed/other in vim-mode
-- keybindings logic not 100% consistent
+- NVim IDE setup is complicated
+  - i.e. just use VSCode or Zed.
+- Non-`nvim` editors: Keybinding logic not 100% consistent but you get most of
+  it!
 
-Some editors aim to address these aspects:
+Some editors with different scope:
+
 - https://helix-editor.com
 - http://kakoune.org
-
-

@@ -86,7 +86,9 @@ Lots CLI tools etc. also use these mappings and its best to stick to them. It is
 also more efficient as they keep your fingers on the
 [home row](https://simple.wikipedia.org/wiki/Home_row).
 
-> [!NOTE] To battle squeeze these mappings into your mechanical cortex I
+<!-- prettier-ignore -->
+> [!NOTE]
+> To battle squeeze these mappings into your mechanical cortex I
 > recommend [ThePrimagean's](https://github.com/ThePrimeagen/vim-be-good) plugin
 > game in `nvim` to quickly memorize or play
 > [this game](https://vim-adventures.com).

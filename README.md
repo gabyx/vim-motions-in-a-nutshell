@@ -201,7 +201,7 @@ For example to _delete two words_: `d2w`
 
 - <kbd>ca"</kbd> : Change (<kbd>c</kbd>) _around_ quotes `"` found from the
   current cursor position.
-- <kbd>ca"</kbd> : Change (<kbd>c</kbd>) _inside_ quotes `"` found from the
+- <kbd>ci"</kbd> : Change (<kbd>c</kbd>) _inside_ quotes `"` found from the
   current cursor position.
 
 **Yank Inside/Around**:
@@ -224,6 +224,15 @@ For example to _delete two words_: `d2w`
 - <kbd>yt?</kbd> : Copy the text selection till the next character `?`.
 - <kbd>dT?</kbd> : Delete the text selection till the previous character `?`.
 
+**Select Inside/Around/Till Character**:
+
+- <kbd>va"</kbd> : Select the text _around_ quotes `"` found from the current
+  cursor position.
+- <kbd>vi"</kbd> : Select the text _inside_ quotes `"` found from the current
+  cursor position.
+- <kbd>vt?</kbd> : Select the text till the next character `?`.
+- <kbd>vT?</kbd> : Select the text till the previous character `?`.
+
 **Copy/Delete/Change Till End**:
 
 - <kbd>c$</kbd> : Change till end of line.
@@ -243,6 +252,8 @@ For example to _delete two words_: `d2w`
 
 ## Miscellaneous
 
+- <kbd>gg</kbd> : Jump to start of the file.
+- <kbd>GG</kbd> : Jump to end of the file.
 - <kbd>&gt;</kbd><kbd>&gt;</kbd> : Add indentation on the current line.
 - <kbd>&lt;</kbd><kbd>&lt;</kbd> : Remove indentation on the current line.
 - <kbd>=</kbd><kbd>=</kbd> : Format current line.
@@ -255,7 +266,7 @@ use
 - <kbd>C</kbd> : Change the selection on all lines. Once done, press
   <kbd>Esc</kbd> to make it apply on all lines.
 
-## Jumping around
+## Jumping Around
 
 Vim keeps a list of your jumps within or between buffers. You can jump back and
 forth in you jump history with

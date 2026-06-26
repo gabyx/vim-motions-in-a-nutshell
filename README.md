@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/gabyx/vim-motions-in-a-nutshell/refs/heads/main/docs/logo.svg" width="200px">
+<img src="https://raw.githubusercontent.com/gabyx/vim-motions-in-a-nutshell/refs/heads/main/docs/logo.svg" width="400px">
 </p>
 
 # Vim Motions in a Nutshell

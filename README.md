@@ -10,9 +10,9 @@
 
 Vim motions are awesome and work almost everywhere. I share here an extract and
 condensed version of what the most important commands are to get you productive
-as fast a possible. This document is not here to teach you all of Vim's magic
-(because I don't know them too =)) but rather to present you the 10-20 most
-valuable commands which made my journey in Vim a steep learning curve. From this
+as fast as possible. This document is not here to teach you all of Vim's magic
+(because I don't know it all either =)) but rather to present the 10-20 most
+valuable commands which made my journey in Vim a steep learning curve. From the
 basics presented in this document you can start exploring more and more and
 refine your habits with even more awesomeness.
 
@@ -20,8 +20,21 @@ refine your habits with even more awesomeness.
 
 # Preliminaries
 
-You can use VS Code with a Vim extension or better `neovim` to follow the below
-summary. Many text based softwares have a vim-mode, or plugins.
+You can use VS Code with a Vim extension or better [`neovim`](https://neovim.io)
+to follow the below summary. Many text-based applications have a vim-mode or
+plugins.
+
+> [!NOTE]
+>
+> If you have [`nix`](https://nixos.org/download) you can try giving `neovim` a
+> direct try and follow the below instructions with
+>
+> ```bash
+> nix run "github:gabyx/dotfiles#nvim-gabyx"
+> ```
+>
+> which starts a fully-configured `neovim` instance (it does touch other nvim
+> distributions e.g. in `~/.config/nvim`!)
 
 ## Cancel Anything
 
@@ -35,7 +48,7 @@ command sequences or other mistakes.
 > Remap <kbd>Caps Lock</kbd> to <kbd>Ctrl</kbd> or <kbd>Esc</kbd> to ease finger
 > strain. You can do this with:
 >
-> - MacOS: In System Settings (Keyboard -> Modifiers Keys) or with
+> - MacOS: In System Settings (Keyboard -> Modifier Keys) or with
 >   [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
 > - Windows: [PowerToys](https://learn.microsoft.com/de-de/windows/powertoys/)
 >   or [dual-key-remap](https://github.com/ililim/dual-key-remap).
@@ -57,7 +70,7 @@ Vim is a modal editor. It has three important modes:
 - `Insert` : Write text.
 - `Visual` : Select lines/blocks of text
 
-You can switch any mode from the normal mode using the following keys:
+You can switch to any mode from the normal mode using the following keys:
 
 - <kbd>i</kbd>/<kbd>a</kbd> : `Insert`
 - <kbd>v</kbd> : `Visual` mode (normal selection).
@@ -82,14 +95,14 @@ takes some time but you will memorize them after 2-3 days.
   current buffer.
 - <kbd>j</kbd> and <kbd>k</kbd> : Moves line down/up in the current buffer.
 
-Lots CLI tools etc. also use these mappings and its best to stick to them. It is
-also more efficient as they keep your fingers on the
+Lots of CLI tools etc. also use these mappings and it's best to stick to them.
+It is also more efficient as they keep your fingers on the
 [home row](https://simple.wikipedia.org/wiki/Home_row).
 
 <!-- prettier-ignore -->
 > [!NOTE]
-> To battle squeeze these mappings into your mechanical cortex I
-> recommend [ThePrimagean's](https://github.com/ThePrimeagen/vim-be-good) plugin
+> To really drill these mappings into your motor cortex I
+> recommend [ThePrimeagen's](https://github.com/ThePrimeagen/vim-be-good) plugin
 > game in `nvim` to quickly memorize or play
 > [this game](https://vim-adventures.com).
 
@@ -97,8 +110,8 @@ also more efficient as they keep your fingers on the
 
 ## Insert at Beginning or End
 
-The next most important command is to insert at the beginning (skipped white
-space) or the end with
+The next most important command is to insert at the beginning (skipping leading
+white space) or the end with
 
 - <kbd>I</kbd> : Insert at the beginning of the line.
 - <kbd>A</kbd> : Insert at the end of the line (append).
@@ -168,8 +181,8 @@ copy/delete or change/substitute it with the commands already learned.
 
 ## Vim Motion Syntax
 
-This is where the fun truly begins! Vim allows to combine motions and operators
-to form "sentences". Sentences have the following structure:
+This is where the fun truly begins! Vim allows you to combine motions and
+operators to form "sentences". Sentences have the following structure:
 
 ```
 [count]<operator>[count]<motion>
@@ -244,16 +257,16 @@ For example to _delete two words_: `d2w`
 
 <!-- prettier-ignore -->
 > [!Note]
-> Yeah, you guessed it, you can use also other things in place of `"`.
+> Yeah, you guessed it, you can also use other things in place of `"`.
 > Try to use <kbd>(</kbd> or <kbd>[</kbd> or <kbd>{</kbd> or <kbd>`</kbd> or
-> <kbd>'</kbd> etc. to easily change around/inside this characters. Also you can
+> <kbd>'</kbd> etc. to easily change around/inside these characters. Also you can
 > use <kbd>w</kbd> or <kbd>W</kbd> to do the action inside/around a word with and
 > without spaces.
 
 ## Miscellaneous
 
 - <kbd>gg</kbd> : Jump to start of the file.
-- <kbd>GG</kbd> : Jump to end of the file.
+- <kbd>G</kbd> : Jump to end of the file.
 - <kbd>&gt;</kbd><kbd>&gt;</kbd> : Add indentation on the current line.
 - <kbd>&lt;</kbd><kbd>&lt;</kbd> : Remove indentation on the current line.
 - <kbd>=</kbd><kbd>=</kbd> : Format current line.
@@ -269,7 +282,7 @@ use
 ## Jumping Around
 
 Vim keeps a list of your jumps within or between buffers. You can jump back and
-forth in you jump history with
+forth in your jump history with
 <kbd>Ctrl</kbd>+<kbd>i</kbd>/<kbd>Ctrl</kbd>+<kbd>o</kbd>.
 
 When programming, this is very useful in conjunction with `gd` (go to definition
@@ -278,8 +291,8 @@ When programming, this is very useful in conjunction with `gd` (go to definition
 ## The End
 
 That's basically it. These are the top commands I use daily. There is obviously
-much more on the Vim motions side. Now, start practicing it, once learned you
-will not change using it, trust me. =)
+much more on the Vim motions side. Now, start practicing — once you've learned
+it, you won't go back, trust me. =)
 
 ---
 

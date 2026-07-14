@@ -33,7 +33,7 @@ plugins.
 > nix run "github:gabyx/dotfiles#nvim-gabyx"
 > ```
 >
-> which starts a fully-configured `neovim` instance (it does touch other nvim
+> which starts a fully-configured `neovim` instance (it does **not** touch other nvim
 > distributions e.g. in `~/.config/nvim`!)
 
 ## Cancel Anything
